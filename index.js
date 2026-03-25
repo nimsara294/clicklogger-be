@@ -18,3 +18,8 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+
+const tapRoutes = require('./routes/tapRoutes');
+
+// after middleware
+app.use('/', tapRoutes);
