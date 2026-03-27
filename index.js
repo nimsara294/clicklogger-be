@@ -8,7 +8,12 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({
+    origin: [
+        'http://localhost:3000',
+        'https://nimsara294.github.io'
+    ]
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
